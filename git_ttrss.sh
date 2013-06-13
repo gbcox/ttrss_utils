@@ -4,7 +4,8 @@
 #
 # This script will update your copy of the Tiny-Tiny-RSS and Tiny-Tiny-RSS-Contrib
 # repositories.  Contrib plugins will then be copied to your ttrss/plugins directory.
-# The script assumes you are running an update-daemon and the Sphinx search engine.
+# The script assumes you are running an update-daemon.  Actions for the Sphinx search
+# engine will be taken if it has been activated.
 #
 # If you install cfg_o_matic.sh in the same directory, your config.php file
 # will be automatically updated.  Please read cfg_o_matic.sh for more information.
