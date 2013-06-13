@@ -30,6 +30,7 @@ else
         exit 99
 fi
 
+owner_group=$( stat -c %U':'%G $TTRSS_CONTRIB_GIT )
 git_logfile="$WEB_ROOT$TTRSS_DIR"'ttrss_git_log_'$(date '+%Y%j_%H%M')
 INPUT1="$WEB_ROOT$TTRSS_DIR"'config.php-dist'
 INPUT2="$WEB_ROOT$TTRSS_DIR"'config.php'
@@ -58,6 +59,7 @@ ttrss_git=$( git --git-dir="${WEB_ROOT}${TTRSS_DIR}.git" --work-tree="${WEB_ROOT
 config_git=$( git --git-dir="${TTRSS_CONTRIB_GIT}.git" --work-tree="${TTRSS_CONTRIB_GIT}" pull 2>&1 );
 cp -au "${TTRSS_CONTRIB_GIT}plugins/"* "${WEB_ROOT}${TTRSS_DIR}plugins/";
 chown -R "${WEB_SERVICE}:${WEB_SERVICE}" "${WEB_ROOT}";
+chown -R "$owner_group" "$TTRSS_CONTRIB_GIT"
 chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}cache"
 chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}feed-icons"
 chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}lock"
