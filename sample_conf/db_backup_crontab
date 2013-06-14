@@ -1,0 +1,2 @@
+@daily cd /home/xxxxx/ttrss_maint/ttrss_utils/ && ./pgsql_cron_backup.sh
+
