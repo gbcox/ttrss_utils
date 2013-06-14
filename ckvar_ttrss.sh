@@ -3,12 +3,18 @@
 # The purpose of this script is to validate variables needed 
 # for various TTRSS utilities. 
 
-if [ -x 'var_ttrss.sh' ]; then
-        source var_ttrss.sh
+if [ -x '../var_ttrss.sh' ]; then
+        source ../var_ttrss.sh
 else
         echo -e "\e[1;31mThis utility requires you to install and configure 'var_ttrss.sh'\e[0m"
         echo -e "\e[1;31mbefore proceeding.\e[0m"
         exit 99
+fi
+
+if [ ! -d "$MAINT_ROOT" ]; then
+	kaboom='TRUE'
+	echo -e "\e[1;33mMAINT_ROOT=$MAINT_ROOT does not exist.\e[0m"
+	echo -e "\e[1;31mPlease correct VARIABLE SECTION.\e[0m"
 fi
 
 if [ ! -d "$WEB_ROOT$TTRSS_DIR" ]; then
@@ -47,6 +53,12 @@ if [[ ${update_state} = 'error' ]]; then
 fi
 
 sphinx_enabled=$( grep -c "define('SPHINX_ENABLED', true);" "$WEB_ROOT$TTRSS_DIR"'config.php' )
+ttrss_dbuser=$( grep "define('DB_USER'," "$WEB_ROOT$TTRSS_DIR"'config.php' )
+ttrss_dbname=$( grep "define('DB_NAME'," "$WEB_ROOT$TTRSS_DIR"'config.php' )
+ttrss_dbuser=${ttrss_dbuser##*\', \"}
+ttrss_dbuser=${ttrss_dbuser%%\"*}
+ttrss_dbname=${ttrss_dbname##*\', \"}
+ttrss_dbname=${ttrss_dbname%%\"*}
 
 if [[ $sphinx_enabled = '1' ]]; then
 	
