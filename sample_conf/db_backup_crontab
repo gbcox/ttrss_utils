@@ -1,2 +1,2 @@
-@daily cd /home/xxxxx/ttrss_maint/ttrss_utils/ && ./pgsql_cron_backup.sh
-
+TTRSS_UTILS_DIR='/home/xxxxx/ttrss_maint/ttrss_utils/'
+@daily cd $TTRSS_UTILS_DIR && ./pgsql_cron_backup.sh
