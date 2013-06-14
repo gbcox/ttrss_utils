@@ -1,7 +1,8 @@
 #!/bin/bash
 #
-# This version is intended only for the normally released versions.  
-# Do not use if you are using the trunk via git.
+# This version is intended only for the normally released versions
+#
+# Do not use if you are using the trunk via git, instead use git_ttrss.sh
 #
 # FIRST TIME USAGE:
 # Run this utility BEFORE and AFTER the upgrade.  This will allow the utility
@@ -9,10 +10,10 @@
 # comparison purposes.  If you have already upgraded, you won't be able to 
 # take advantage of this check for the first time run - however, subsequent
 # runs will be able to do this extra comparison.  DO NOT delete or change
-# the "config.php-dist_cfg_ttrss" file this utility creates.
+# the "config.php-dist_cfg_ttrss" file this utility creates
 #
-# IMPORTANT:  You must customize the variables located in the first six
-# uncommented lines of var_ttrss.sh before running this utility.
+# IMPORTANT:  You must customize the variables located in the
+# uncommented lines of var_ttrss.sh before running this utility
 
 if [ -x 'ckvar_ttrss.sh' ]; then
 	source ckvar_ttrss.sh

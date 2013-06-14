@@ -1,16 +1,17 @@
 #!/bin/bash
-# Created for use with Fedora 18.  If you aren't using Fedora, you may need
-# to make adjustments.
+# Created for use with Fedora.  If you aren't using Fedora, you may need
+# to make adjustments
 #
 # This script will update your copy of the Tiny-Tiny-RSS and Tiny-Tiny-RSS-Contrib
-# repositories.  Contrib plugins will then be copied to your ttrss/plugins directory.
+# repositories.  Contrib plugins will then be copied to your ttrss/plugins directory
+#
 # The script assumes you are running an update-daemon.  Actions for the Sphinx search
-# engine will be taken if it has been activated.
+# engine will be taken if it has been activated
 #
 # If you install cfg_o_matic.sh in the same directory, your config.php file
-# will be automatically updated.  Please read cfg_o_matic.sh for more information.
+# will be automatically updated.  Please read cfg_o_matic.sh for more information
 #
-# All displayed messages will also be saved in a logfile.
+# All displayed messages will also be saved in a logfile
 # Logfiles will be kept in $WEB_ROOT$TTRSS_DIR for 14 days
 #
 # You must also have issued git clone before running this script:
@@ -20,8 +21,8 @@
 # Additional information can be found here:
 # http://tt-rss.org/forum/viewtopic.php?f=1&t=1697
 #
-# IMPORTANT:  You must customize the variables located in the first six
-# uncommented lines of var_ttrss.sh before running this utility.
+# IMPORTANT:  You must customize the variables located in the
+# uncommented lines of var_ttrss.sh before running this utility
 
 if [ -x 'ckvar_ttrss.sh' ]; then
         source ckvar_ttrss.sh

@@ -16,7 +16,7 @@
 # TTRSS DEFAULT:  This statement matches what is in config.php-dist
 # $HOST OVERRIDE:  You have customized the entry from config.php-dist
 # TTRSS CHANGE:  The dist copy has changed on a modified record, you need to manually redo 
-# NEW OPTION FOUND: A new option has been added during this update. 
+# NEW OPTION FOUND: A new option has been added during this update 
 # 
 # Previous versions of your config.php will be kept for 14 days
 
