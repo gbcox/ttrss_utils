@@ -8,7 +8,7 @@
 if [ -x 'ckvar_ttrss.sh' ]; then
 	source ckvar_ttrss.sh
 else
-	echo -e "\e[1;31mThis utility requires you to install and configure 'ckvar_ttrss.sh'\e[0m"
+	echo -e "\e[1;31mThis utility requires you to install and configure 'var_ttrss.sh'\e[0m"
 	echo -e "\e[1;31mbefore proceeding.\e[0m"
 	exit 99
 fi
