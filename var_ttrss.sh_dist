@@ -19,7 +19,6 @@ WEB_SERVICE='nginx';					# VALIDATE - Either apache or nginx
 TTRSS_UPDATE_SERVICE='rss-update';			# VALIDATE - What you named the update service
 SPHINX_SERVICE='searchd';				# VALIDATE - System default for Sphinx on Fedora
 
-# >>>>>> END USER MODIFIED VARIABLE SECTION <<<
+# >>>>>> END USER MODIFIED VARIABLE SECTION <<<<<<
 
 return;
-
