@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# The purpose of this script is to set variables needed 
+# for various TTRSS utilities
+#
+# This file should be copied to your $MAINT_ROOT directory and renamed to 
+# ===> var_ttrss.sh
+#
+# IMPORTANT:  VALIDATE and modify as appropriate the uncommented lines.  These
+# will set the variables for your local installation
+
+# >>>>>> START USER MODIFIED VARIABLE SECTION <<<<<<
+
+TTRSS_DIR='rss/';					# VALIDATE - TTRSS Directory Name
+WEB_ROOT='/var/www/html/';				# VALIDATE - System default for Fedora
+MAINT_ROOT='/home/xxxxx/ttrss_maint/';			# VALIDATE - Maintenance Location
+TTRSS_CONTRIB_GIT=$MAINT_ROOT'ttrss_contrib/';		# VALIDATE - CONTRIB git clone location
+WEB_SERVICE='nginx';					# VALIDATE - Either apache or nginx
+TTRSS_UPDATE_SERVICE='rss-update';			# VALIDATE - What you named the update service
+SPHINX_SERVICE='searchd';				# VALIDATE - System default for Sphinx on Fedora
+
+# >>>>>> END USER MODIFIED VARIABLE SECTION <<<
+
+return;
+
