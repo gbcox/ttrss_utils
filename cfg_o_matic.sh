@@ -3,7 +3,7 @@
 # from other utilities.
 #
 # This script will merge changes into your config.php from config.php-dist
-# The assumption is that config.php-dist changes are authoratative
+# The assumption is that config.php-dist changes are authoritative
 # This means that if something changes in config.php-dist those changes
 # will be merged into your config.php
 # Changes made to your config.php will be preserved only if they are made to
