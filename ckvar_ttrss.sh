@@ -52,15 +52,10 @@ if [[ ${update_state} = 'error' ]]; then
 	echo -e "\e[1;31mPlease correct VARIABLE SECTION.\e[0m"
 fi
 
-sphinx_enabled=$( grep -c "define('SPHINX_ENABLED', true);" "$WEB_ROOT$TTRSS_DIR"'config.php' )
-ttrss_dbuser=$( grep "define('DB_USER'," "$WEB_ROOT$TTRSS_DIR"'config.php' )
-ttrss_dbname=$( grep "define('DB_NAME'," "$WEB_ROOT$TTRSS_DIR"'config.php' )
-ttrss_dbuser=${ttrss_dbuser##*\', \"}
-ttrss_dbuser=${ttrss_dbuser%%\"*}
-ttrss_dbname=${ttrss_dbname##*\', \"}
-ttrss_dbname=${ttrss_dbname%%\"*}
+config_php_var=$( php get_defines.php "$WEB_ROOT$TTRSS_DIR" )
+eval $config_php_var
 
-if [[ $sphinx_enabled = '1' ]]; then
+if [[ $SPHINX_ENABLED = '1' ]]; then
 	
 	sphinx_state=$(systemctl show "$SPHINX_SERVICE.service" --property=LoadState)
 	sphinx_state=${sphinx_state#*=}
@@ -77,5 +72,3 @@ if [[ $kaboom = 'TRUE' ]]; then
 else
 	return;
 fi
-
-
