@@ -13,6 +13,6 @@ else
 	exit 99
 fi
 
-pg_dump -U "$ttrss_dbuser" "$ttrss_dbname" | xz > "$MAINT_ROOT"db_backup/ttrss_$(date '+%Y%j_%H%M').sql.xz
+pg_dump -U "$DB_USER" "$DB_NAME" | xz > "$MAINT_ROOT"db_backup/ttrss_$(date '+%Y%j_%H%M').sql.xz
 find "$MAINT_ROOT"db_backup/ttrss_*.xz -maxdepth 1 -type f -mtime +14 -delete
 exit
