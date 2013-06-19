@@ -51,7 +51,7 @@ fi
 systemctl stop "${WEB_SERVICE}.service";
 systemctl stop "${TTRSS_UPDATE_SERVICE}.service";
 
-if [[ ${sphinx_enabled} = '1' ]]; then
+if [[ ${SPHINX_ENABLED} = '1' ]]; then
 	systemctl stop "${SPHINX_SERVICE}.service";
 fi
 
@@ -92,7 +92,7 @@ if [[ "$ttrss_git" = *schema* ]]; then
 else
 	systemctl start "${WEB_SERVICE}.service";
 	systemctl start "${TTRSS_UPDATE_SERVICE}.service";
-	if [[ ${sphinx_enabled} = '1' ]]; then
+	if [[ ${SPHINX_ENABLED} = '1' ]]; then
 		systemctl start "${SPHINX_SERVICE}.service";
 	fi
 fi
