@@ -96,7 +96,7 @@ fi
 find $WEB_ROOT$TTRSS_DIR'ttrss_git_log_'* -maxdepth 1 -type f -mtime +14 -delete
 rm "$INPUT3"
 
-chmod -R '755' "${WEB_ROOT}${TTRSS_DIR}lock"
-chmod -R '755' "${WEB_ROOT}${TTRSS_DIR}cache"
-chmod -R '655' "${WEB_ROOT}${TTRSS_DIR}feed-icons"
+chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}lock"
+chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}cache"
+chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}feed-icons"
 exit;
