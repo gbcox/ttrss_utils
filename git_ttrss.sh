@@ -59,9 +59,8 @@ cp "$INPUT1" "$INPUT3"
 
 ttrss_git=$( git --git-dir="${WEB_ROOT}${TTRSS_DIR}.git" --work-tree="${WEB_ROOT}${TTRSS_DIR}" pull 2>&1 );
 config_git=$( git --git-dir="${TTRSS_CONTRIB_GIT}.git" --work-tree="${TTRSS_CONTRIB_GIT}" pull 2>&1 );
+
 cp -au "${TTRSS_CONTRIB_GIT}plugins/"* "${WEB_ROOT}${TTRSS_DIR}plugins/";
-chown -R "${WEB_SERVICE}:${WEB_SERVICE}" "${WEB_ROOT}";
-chown -R "$owner_group" "$TTRSS_CONTRIB_GIT"
 
 echo -e "\e[1;32mTTRSS GIT PULL RESULTS\e[0m" | tee -a $git_logfile
 echo -e "\e[1;33m$ttrss_git\e[0m" | tee -a $git_logfile
@@ -94,9 +93,10 @@ else
 fi
 
 find $WEB_ROOT$TTRSS_DIR'ttrss_git_log_'* -maxdepth 1 -type f -mtime +14 -delete
+
 rm "$INPUT3"
 
-chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}lock"
-chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}cache"
-chmod -R '777' "${WEB_ROOT}${TTRSS_DIR}feed-icons"
+chown -R "${WEB_SERVICE}:${WEB_SERVICE}" "${WEB_ROOT}";
+chown -R "$owner_group" "$TTRSS_CONTRIB_GIT"
+
 exit;
