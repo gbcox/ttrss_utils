@@ -1,0 +1,2 @@
+TTRSS_UTILS_DIR='/home/xxxxx/ttrss_maint/ttrss_utils/'
+@daily cd $TTRSS_UTILS_DIR && ./mariadb_cron_backup.sh
