@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script is not intended to be run standalone.  It will be called
 # from other utilities.
 #

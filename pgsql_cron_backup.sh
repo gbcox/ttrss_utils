@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This utility will create a POSTGRESQL backup.  It is intended to be run from crontab
 # but can also be invoked manually
 #

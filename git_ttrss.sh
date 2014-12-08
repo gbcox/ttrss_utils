@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Created for use with Fedora.  If you aren't using Fedora, you may need
 # to make adjustments
 #

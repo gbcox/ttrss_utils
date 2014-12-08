@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # The purpose of this script is to validate variables needed 
 # for various TTRSS utilities. 
