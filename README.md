@@ -1,6 +1,8 @@
 TTRSS Utilities for Fedora
 ==========================
 
+THIS REPOSITORY HAS MOVED TO:  https://bitbucket.org/gbcox/ttrss_utils
+
 Various utilities and configuration samples to assist with installation and
 configuration of Tiny Tiny RSS running under Fedora.
 
